@@ -7,11 +7,73 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Train Scheduler</title>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <h1 class="display-4">The Train Schedule</h1>
+          <p class="lead">Please refrain from anything plane, crane, grain, or generally vain related.</p>
+        </div>
+    </div>
 
+    <div class="sched-container">
+        <div class="schedule-head">Current Schedule</div>
+        <table class="table table-hover text-center">
+            <thead class="table-head">
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trenton Express</td>
+                    <td>Trenton</td>
+                    <td>25</td>
+                    <td>05:35 PM</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="sched-container add-train">
+        <div class="schedule-head">Add Train Schedule</div>
+        <div class="input-group mb-3">
+            <div class="input-group">
+              <span for="train-name">Train Name</span>
+            </div>
+            <input type="text" class="form-control" id="train-name">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group">
+              <span for="destination">Destination</span>
+            </div>
+            <input type="text" class="form-control" id="destination">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group">
+              <span for="first-train">First Train Time (HH:mm - military time)</span>
+            </div>
+            <input type="text" class="form-control" id="first-train">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group">
+              <span for="frequency">Frequency (min)</span>
+            </div>
+            <input type="text" class="form-control" id="frequency">
+          </div>
+          <button type="button" class="btn btn-primary" id="submit-button">Submit</button>
+    </div>
+
+    
     <script src="assets/javascript/scheduler.js"></script>
 </body>
 </html>

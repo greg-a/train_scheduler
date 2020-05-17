@@ -1,0 +1,36 @@
+.sched-container {
+    border: 1px solid black;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.schedule-head {
+    background-color: black;
+    color: white;
+    padding-left: .5em;
+    font-size: 1.25em;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.table-head {
+    font-weight: bold;
+}
+
+.add-train {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.input-group {
+    margin: 5px;
+    width: 99%;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.btn {
+    margin: 5px;
+}
