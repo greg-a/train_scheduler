@@ -11,12 +11,13 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
           <h1 class="display-4">The Train Schedule</h1>
-          <p class="lead">Please refrain from anything plane, crane, grain, or generally vain related.</p>
+          <p class="lead">Please refrain from anything plane, crane, and grain related scheduling.</p>
         </div>
     </div>
 
@@ -32,15 +33,7 @@
                     <th scope="col">Minutes Away</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Trenton Express</td>
-                    <td>Trenton</td>
-                    <td>25</td>
-                    <td>05:35 PM</td>
-                    <td>10</td>
-                </tr>
-            </tbody>
+            <tbody class="table-rows"></tbody>
         </table>
     </div>
     
@@ -70,7 +63,30 @@
             </div>
             <input type="text" class="form-control" id="frequency">
           </div>
-          <button type="button" class="btn btn-primary" id="submit-button">Submit</button>
+          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" id="submit-button">
+            Submit
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Success!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Train Schedule Saved
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <button type="button" class="btn btn-primary" id="submit-button">Submit</button> -->
     </div>
 
     
