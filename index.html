@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Train Scheduler</title>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -13,11 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-          <h1 class="display-4">The Train Schedule</h1>
-          <p class="lead">Please refrain from anything plane, crane, and grain related scheduling.</p>
+            <h1 class="display-4">The Train Schedule</h1>
+            <p class="lead">Planes, trains and...actually just trains.</p>
         </div>
     </div>
 
@@ -36,60 +39,61 @@
             <tbody class="table-rows"></tbody>
         </table>
     </div>
-    
+
     <div class="sched-container add-train">
         <div class="schedule-head">Add Train Schedule</div>
         <div class="input-group mb-3">
             <div class="input-group">
-              <span for="train-name">Train Name</span>
+                <span for="train-name">Train Name</span>
             </div>
             <input type="text" class="form-control" id="train-name">
-          </div>
-          <div class="input-group mb-3">
+        </div>
+        <div class="input-group mb-3">
             <div class="input-group">
-              <span for="destination">Destination</span>
+                <span for="destination">Destination</span>
             </div>
             <input type="text" class="form-control" id="destination">
-          </div>
-          <div class="input-group mb-3">
+        </div>
+        <div class="input-group mb-3">
             <div class="input-group">
-              <span for="first-train">First Train Time (HH:mm - military time)</span>
+                <span for="first-train">First Train Time (HH:mm - military time)</span>
             </div>
             <input type="text" class="form-control" id="first-train">
-          </div>
-          <div class="input-group mb-3">
+        </div>
+        <div class="input-group mb-3">
             <div class="input-group">
-              <span for="frequency">Frequency (min)</span>
+                <span for="frequency">Frequency (min)</span>
             </div>
             <input type="text" class="form-control" id="frequency">
-          </div>
-          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" id="submit-button">
+        </div>
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" id="submit-button">
             Submit
-          </button>
-          
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Success!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Success!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Train Schedule Saved
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  Train Schedule Saved
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- <button type="button" class="btn btn-primary" id="submit-button">Submit</button> -->
+        </div>
     </div>
 
-    
+
     <script src="assets/javascript/scheduler.js"></script>
 </body>
+
 </html>

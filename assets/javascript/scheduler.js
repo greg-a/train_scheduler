@@ -1,3 +1,5 @@
+// add ability to edit and delete existing train schedules
+
 var firebaseConfig = {
     apiKey: "AIzaSyDV2m1rQXDivzw2lzH4DTenn8L_tF81FpQ",
     authDomain: "first-project-80182.firebaseapp.com",
@@ -29,9 +31,6 @@ $("#submit-button").on("click", function(event) {
     $("#destination").val("");
     $("#first-train").val("");
     $("#frequency").val("");
-
- 
-
 })
 
 database.ref().on("child_added", function(childSnapshot) {
@@ -43,11 +42,7 @@ database.ref().on("child_added", function(childSnapshot) {
     var minutesAway = $("<td>");
 
     var newRow = $("<tr>");
-
-    // newRow.append(trainName, destination, frequency, nextArrival, minutesAway);
-    // $(".table-rows").append(newRow);
     
-    var currentTime = moment().format("HH:mm");
     var tFrequency = childSnapshot.val().frequency;
     var firstTrain = childSnapshot.val().first;
     var firstTrainConverted = moment(firstTrain, "HH:mm").subtract(1, "years");
@@ -56,7 +51,7 @@ database.ref().on("child_added", function(childSnapshot) {
     var tRemainder = diffTime % tFrequency;
     var tMinutesTillTrain = tFrequency - tRemainder;
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    
+
     nextArrival.text(moment(nextTrain).format("hh:mm"));
     minutesAway.text(tMinutesTillTrain);
 
